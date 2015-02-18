@@ -7,10 +7,17 @@ def get_proper_divisors(number)
 end
 
 def is_prime(number)
+	return false if number == 1
 	sqrt = Math.sqrt(number)
 	for i in 2..sqrt
 		return false if number % i == 0
 	end
 	return true
+end
+
+def factorial(number)
+	sum = 1 
+	number.downto(2) {|number| sum *= number}
+	return sum
 end
 
