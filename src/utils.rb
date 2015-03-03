@@ -21,3 +21,7 @@ def factorial(number)
 	return sum
 end
 
+#Generate all permutations of pandigitals of the given orders
+def generate_pandigitals (order)
+	(1..order).to_a.permutation.map(&:join)
+end
