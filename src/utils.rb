@@ -6,6 +6,26 @@ def get_proper_divisors(number)
 	return divisors
 end
 
+def get_prime_divisors(number)
+	divisors = {}
+    currentNumber = number
+    index = 1
+    while true
+    	index += 1
+    	break if index > currentNumber
+    	if is_prime(index)
+    		if currentNumber % index == 0
+    			divisors[index] = 0
+    			while currentNumber % index == 0
+    				divisors[index] += 1
+    				currentNumber /= index
+    			end
+    		end
+    	end
+    end
+    return divisors ;
+end
+
 def is_prime(number)
 	return false if number == 1
 	sqrt = Math.sqrt(number)
