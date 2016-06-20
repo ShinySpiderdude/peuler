@@ -1,15 +1,9 @@
+#!/usr/bin/env ruby
 
+require 'open-uri'
 
+hands = open ("https://projecteuler.net/project/resources/p054_poker.txt") { |io| io.read}
 
-def straight(hand)
-	
-
-def straightFlush(hand)
-
-end
-
-
-#-1 if left hand is better, 1 if the right hand is better
-def the_better_hand(left, right)
-
+hands.split("\n").each do |hand| 
+	puts "i #{hand}"
 end
