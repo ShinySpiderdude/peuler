@@ -1,7 +1,7 @@
-def kuku 
-    puts "hello"
+#!/usr/bin/env ruby
+
+def nearestWholeRoot(n)
+	Math.sqrt n.downto(1).find {|n| Math.sqrt(n) % 1 == 0}
 end
 
-s = "strig"
-
-puts s
+puts nearestWholeRoot(27)
